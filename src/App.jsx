@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/NavBar";
 import About from "./components/About";
 import Education from "./components/Education";
+import ColorTest from "./components/ColorTest";
 {
   /*import Experience from "./components/Experience";
 import Projects from "./components/Projects";
@@ -12,11 +13,12 @@ import EducationCard from "./components/EducationCard";
 
 function App() {
   return (
-    <>
+    <div className="bg-background dark:bg-background min-h-screen transition-colors">
       <Navbar />
       <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
         <About />
         <Education />
+        <ColorTest />
         
         {/*
         
@@ -25,7 +27,7 @@ function App() {
         <Skills />*/}
         <ContactCard />
       </div>
-    </>
+  </div>
   );
 }
 
