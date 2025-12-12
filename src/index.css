@@ -18,3 +18,77 @@
     --accent: #223e9b;
   }
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #050505; /* El mismo negro que usas en el Hero */
+  color: #e6edf3; /* Tu color de texto base */
+}
+
+/* Efecto de líneas de TV antiguas (Scanlines) */
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 100% 4px; /* Grosor de las líneas */
+  pointer-events: none; /* Para que puedas dar click a lo que está debajo */
+}
+
+/* Animación sutil para el texto Glitch (vibración) */
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(1px, 1px); }
+  50% { transform: translate(-1px, -1px); }
+  75% { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.hover-glitch:hover {
+  animation: shake 0.2s infinite;
+  /* Efecto RGB Split con sombras de texto */
+  text-shadow: 2px 2px 0px var(--primary), -2px -2px 0px var(--accent);
+}
+
+/* Animación Entrada desde la Izquierda */
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* Empieza 100px a la izquierda */
+    filter: blur(10px); /* Empieza borroso */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Animación Entrada desde la Derecha */
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); /* Empieza 100px a la derecha */
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0.9; /* Opacidad final (0.9 para el efecto transparente que usas) */
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Clases utilitarias para usar en el JSX */
+.animate-enter-left {
+  animation: slide-in-left 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-enter-right {
+  animation: slide-in-right 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.2s; /* Pequeño retraso para que no entren al mismo tiempo */
+  opacity: 0; /* Para que no se vea antes de animar */
+}
