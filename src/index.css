@@ -4,18 +4,28 @@
 
 @layer base {
   :root {
-    --text: #051605;
-    --background: #f7fdf7;
-    --primary: #059669;
-    --secondary: #94cce7;
-    --accent: #6581dd;
+    --background: #050505; /* Casi negro absoluto, para fundirse con el Home */
+    --text: #f8fafc;       /* Blanco humo para títulos */
+    --text-muted: #94a3b8; /* Gris azulado para textos secundarios */
+
+    /* --- TUS COLORES DE MARCA --- */
+    --primary: #059669;    /* Emerald 600 - Tu verde característico */
+    
+    /* --- TARJETAS Y ELEMENTOS --- */
+    /* La tarjeta debe ser sutilmente más clara que el fondo para destacar */
+    --card-bg: #0f172a;    /* Slate 900 */
+    
+    /* --- ACCENTOS --- */
+    --secondary: #1e293b;  /* Slate 800 - Para fondos de tags inactivos */
+    --secondary-text: #38bdf8; /* Sky 400 - Texto celeste brillante para tags */
+    --accent: #6366f1;     /* Indigo 500 - Botones de acción */
   }
   .dark {
-    --text: #eafaea;
-    --background: #020802;
+    --text: #f1f5f9;
+    --background: #020617;
     --primary: #34d399;
-    --secondary: #19506c;
-    --accent: #223e9b;
+    --secondary: #94a3b8;
+    --accent: #818cf8;
   }
 }
 
@@ -91,4 +101,25 @@ body, html {
   animation: slide-in-right 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   animation-delay: 0.2s; /* Pequeño retraso para que no entren al mismo tiempo */
   opacity: 0; /* Para que no se vea antes de animar */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Opcional: Personalizar la barra de scroll para que combine con tu modo oscuro */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #059669; /* Tu color Primary */
+  }
 }

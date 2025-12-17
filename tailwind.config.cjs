@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'text': 'var(--text)',
+        'secondary-text': 'var(--secondary-text)',
         'background': 'var(--background)',
         'primary': 'var(--primary)',
         'secondary': 'var(--secondary)',
@@ -16,6 +17,7 @@ module.exports = {
         'muted': 'var(--muted)',
         'success': 'var(--success)',
         'danger': 'var(--danger)',
+        'card-bg': 'var(--card-bg)',
       },
     }
   },
