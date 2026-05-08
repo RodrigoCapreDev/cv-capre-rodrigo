@@ -92,19 +92,18 @@ function ProjectCard({ project }) {
       {/* 3. FOOTER (Botones de Acción Brutalistas) */}
       <div className="grid grid-cols-2 border-t border-white/20 divide-x divide-white/20">
         <a
-          href="#"
+          href="https://github.com/RodrigoCapreDev/Coffee-Management-System"
           target="_blank"
           className="py-4 text-muted text-center font-mono text-xs font-bold hover:bg-white hover:text-black transition-colors uppercase flex items-center justify-center gap-2"
         >
           <span>GITHUB</span> ↗
         </a>
-        <a
-          href="#"
-          target="_blank"
+        <button
+          onClick={(e) => e.preventDefault()}
           className="py-4 text-center font-mono text-xs font-bold bg-accent hover:bg-primary hover:text-black transition-colors uppercase flex items-center justify-center gap-2"
         >
           <span>{project.linkDemo}</span> ▶
-        </a>
+        </button>
       </div>
 
       {/* EFECTO DECORATIVO: Esquina cortada o detalle técnico */}

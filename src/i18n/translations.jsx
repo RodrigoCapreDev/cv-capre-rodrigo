@@ -2,8 +2,8 @@ export const translations = {
   es: {
     // Header
     systemOnline: "SISTEMA_ONLINE",
-    role: "DESARROLLADOR FULLSTACK",
-    level: "ESTUDIANTE ING. 4TO AÑO",
+    role: "DEVELOPER TRAINEE",
+    level: "5TO AÑO ING. EN SISTEMAS",
 
     // Hero Principal
     title1: "SOFTWARE",
@@ -13,9 +13,12 @@ export const translations = {
     labelProfile: "( Perfil Profesional )",
     profileDesc: (
       <>
-        Estudiante avanzado de Ingeniería en Sistemas de Información (UTN FRLP)
-        apasionado por la lógica. Combino análisis ingenieril con experiencia
-        práctica en
+        Estudiante de 5to año de Ingeniería en Sistemas enfocado en el
+        desarrollo Fullstack. Experiencia en la creación de aplicaciones
+        integrales con React y Django, con fuerte énfasis en la calidad del
+        software y la automatización mediante Docker. Busco aplicar mi
+        pensamiento lógico y formación técnica en proyectos desafiantes y
+        escalables.
         <span className="text-white font-medium"> Python</span>,
         <span className="text-white font-medium"> JavaScript</span> y
         <span className="text-white font-medium"> Azure</span>.
@@ -33,23 +36,23 @@ export const translations = {
 
     projectsTitle: "MÓDULOS_DESARROLLADOS",
     projectsSubtitle: "EXPERIENCIA PRÁCTICA & ARQUITECTURA",
-    
+
     project1: {
       id: "PROY_01",
-      name: "SISTEMA DE GESTIÓN DE INVENTARIO",
+      name: "SISTEMA DE GESTIÓN DE CAFES",
       type: "FULLSTACK / INFRA",
-      desc: "Plataforma SPA para la gestión integral de stock. Diseñada con arquitectura desacoplada (Frontend/Backend) y desplegada en entorno nube.",
+      desc: "Desarrollé una plataforma integral para la gestión de productos de cafetería. Implementé una API REST con Django REST Framework, un frontend dinámico con React. El diseño fue construido desde cero utilizando CSS moderno con una arquitectura de variables personalizadas. Logré un entorno de despliegue profesional mediante la contenerización con Docker y la configuración de Nginx como servidor de producción y proxy inverso.",
       tech: ["React", "Django", "PostgreSQL", "Docker", "Azure"],
-      status: "FINALIZADO",
+      status: "EN DESARROLLO - PRÓXIMAMENTE DEPLOY",
       linkCode: "VER CÓDIGO",
-      linkDemo: "DEPLOY"
+      linkDemo: "DEPLOY",
     },
   },
 
   en: {
     // Header
     systemOnline: "SYSTEM_ONLINE",
-    role: "FULLSTACK DEV",
+    role: "TRAINEE DEV",
     level: "4TH YEAR ENG. STUDENT",
 
     // Hero Principal

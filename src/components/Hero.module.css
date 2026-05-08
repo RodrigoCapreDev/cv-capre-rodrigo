@@ -1,0 +1,47 @@
+.cursor {
+  width: 3px;
+  height: 0.85em;
+  background: var(--primary, #22c55e);
+  animation: blink-cursor 1s step-end infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.dotsNav button {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  outline: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  outline: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+
+.dot[style*="rgb"] {
+  background: var(--primary, #22c55e);
+}
+
+.dotsNav button.active {
+  background: var(--primary, #22c55e);
+  outline: 1px solid var(--primary, #22c55e);
+}
