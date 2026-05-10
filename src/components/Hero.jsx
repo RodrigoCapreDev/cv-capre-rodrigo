@@ -261,7 +261,7 @@ export default function Hero() {
 
       <div className="relative z-10 flex justify-between items-end mt-4">
         <a
-          href="#proyectos"
+          href="#skills"
           className="group flex items-center gap-4 font-mono text-sm cursor-pointer text-muted hover:text-primary transition-colors"
         >
           <span className="text-xl group-hover:translate-y-1 transition-transform text-primary">

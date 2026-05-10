@@ -25,15 +25,16 @@ export const translations = {
       </>
     ),
 
+    skillsTile: "STACK_TECNOLÓGICO",
+    skillsSubtitle: "HERRAMIENTAS Y TECNOLOGÍAS QUE USO PARA CONSTRUIR SOLUCIONES",
     // Stack labels
     stackCore: "LENGUAJES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / NUBE",
 
     // Footer
-    cta: "[ VER EXPERIENCIA & PROYECTOS ]",
+    cta: "[ /cd stack | ls ]",
     langLabel: "IDIOMA",
-
     projectsTitle: "MÓDULOS_DESARROLLADOS",
     projectsSubtitle: "EXPERIENCIA PRÁCTICA & ARQUITECTURA",
 

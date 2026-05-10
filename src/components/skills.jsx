@@ -1,100 +1,152 @@
 import { useLanguage } from "../context/LanguageContext.jsx";
+import ScrollReveal from "./ScrollReveal.jsx";
+import styles from "./Skills.module.css";
 
 const SKILLS = [
   {
     category: "stackCore",
     label: "CORE",
-    skills: "PYTHON / JS / C# / SQL"
+    skills: ["PYTHON", "JS", "C#", "SQL"],
   },
   {
     category: "stackWeb",
     label: "WEB",
-    skills: "REACT / HTML / DJANGO"
+    skills: ["REACT", "HTML", "DJANGO"],
   },
   {
     category: "stackInfra",
     label: "DEVOPS / INFRA",
-    skills: "GIT / GITHUB / DOCKER / AZURE / LINUX"
-  }
+    skills: ["GIT", "GITHUB", "DOCKER", "AZURE", "LINUX"],
+  },
 ];
 
 export default function Skills() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-between py-20 px-6 md:px-12 bg-background text-text overflow-hidden" id="skills">
-      {/* FONDO */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-background"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--primary),transparent_70%)] opacity-10"></div>
-      </div>
-
-      {/* CONTENIDO */}
-      <div className="relative z-10 w-full">
-        {/* TÍTULO */}
-        <div className="mb-16">
-          <h2 className="font-mono text-xs text-primary uppercase tracking-widest mb-2">
-            [ STACK TECNOLÓGICO ]
-          </h2>
-          <p className="text-lg md:text-2xl font-light text-text/80">
-            Herramientas y tecnologías que uso para construir soluciones
-          </p>
-        </div>
-
-        {/* GRID DE SKILLS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {SKILLS.map((skill, idx) => (
-            <div
-              key={idx}
-              className="border border-white/10 p-8 rounded-lg hover:border-primary transition-colors group"
-              style={{ animationDelay: `${idx * 0.1}s`, animationFillMode: "backwards" }}
-            >
-              <div className="font-mono text-xs text-primary uppercase tracking-widest mb-4 group-hover:text-green-400 transition-colors">
-                {skill.label}
-              </div>
-              <div className="text-lg md:text-xl font-light text-text/80 leading-relaxed">
-                {skill.skills}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* DESCRIPCIÓN ALTERNATIVA */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-mono text-xs text-primary uppercase tracking-widest mb-4">
-                Backend
-              </h3>
-              <p className="text-text/70 leading-relaxed">
-                Especializado en arquitectura de APIs robustas y bases de datos escalables. Experiencia con Python, Django y C#.
+    <section
+      className="min-h-screen bg-background text-text px-6 md:px-12 py-8 relative border-t border-white/10"
+      id="skills"
+    >
+      <ScrollReveal>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-4">
+          <div>
+            <div className={styles.glitchWrapper}>
+              <h2
+                className={`${styles.glitchTitle} font-['Archivo_Black'] text-4xl md:text-5xl uppercase`}
+                data-text={t.skillsTile}
+              >
+                {t.skillsTile}
+              </h2>
+              <p className="font-mono text-primary text-sm tracking-widest mt-2">
+                // {t.skillsSubtitle}
               </p>
             </div>
-            <div>
-              <h3 className="font-mono text-xs text-primary uppercase tracking-widest mb-4">
-                Frontend
-              </h3>
-              <p className="text-text/70 leading-relaxed">
-                Desarrollo de interfaces modernas y responsivas con React. Énfasis en UX/UI y performance.
+            {/*}
+            <h2 className="font-['Archivo_Black'] text-4xl md:text-5xl uppercase text-white bg-clip-text">
+              {t.skillsTile}
+            </h2>
+            <p className="font-mono text-primary text-sm tracking-widest mt-2">
+              // {t.skillsSubtitle}
+            </p>*/}
+          </div>
+          <div className="font-mono text-xs text-muted hidden md:block">
+            DIR: /ROOT/SKILLS
+          </div>
+
+          <div className="absolute -bottom-12 left-8 w-px h-12 bg-gradient-to-b from-primary/50 to-transparent md:hidden"></div>
+        </div>
+
+        {/* CONTENIDO */}
+        <div className="relative z-10 w-full">
+          {/* GRID DE SKILLS (MÓDULOS TIPO TERMINAL) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+            {SKILLS.map((item, idx) => (
+              <div
+                key={idx}
+                className="group border border-white/10 bg-white/[0.02] p-6 rounded-md hover:border-primary hover:bg-primary/5 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                style={{
+                  animationDelay: `${idx * 0.1}s`,
+                  animationFillMode: "backwards",
+                }}
+              >
+                {/* HEADER DE LA CARD */}
+                <div className="flex items-center gap-3 mb-6">
+                  {/* Punto de estado con resplandor neón */}
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_currentColor] text-primary"></span>
+                  <span className="font-mono text-xs tracking-[0.2em] text-white/50 group-hover:text-primary/70 transition-colors">
+                    {item.label}
+                  </span>
+                </div>
+
+                {/* CUERPO DE LA CARD */}
+                <div className="flex flex-wrap gap-x-4 gap-y-2">
+                  {(Array.isArray(item.skills)
+                    ? item.skills
+                    : [item.skills]
+                  ).map((s, i) => (
+                    <span
+                      key={i}
+                      className="font-mono text-[0.95rem] font-light text-white/80"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+
+                {/* FOOTER DE LA CARD (Con borde punteado) */}
+                <div className="mt-8 pt-4 border-t border-dashed border-white/10 flex justify-between items-center">
+                  <span className="font-mono text-[10px] text-white/20 group-hover:text-primary/40 transition-colors">
+                    STATUS: OK_
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* DESCRIPCIÓN TÉCNICA (PANELES) */}
+          <div className={styles.panelsContainer}>
+            {/* PANEL 1: BACKEND */}
+            <div className={styles.panelCard}>
+              <div className={styles.panelHeader}>
+                <span className={styles.panelArrow}>{">"}</span>
+                <h3 className={styles.panelTitle}>BACKEND && ARCHITECTURE</h3>
+              </div>
+              <p className={styles.panelText}>
+                Enfocado en la construcción de APIs escalables con Django REST
+                Framework y la optimización de procesos mediante lógica de
+                ingeniería.
+              </p>
+            </div>
+
+            {/* PANEL 2: SYSTEMS */}
+            <div className={styles.panelCard}>
+              <div className={styles.panelHeader}>
+                <span className={styles.panelArrow}>{">"}</span>
+                <h3 className={styles.panelTitle}>SYSTEMS && DEPLOYMENT</h3>
+              </div>
+              <p className={styles.panelText}>
+                Experiencia en virtualización y orquestación de entornos
+                productivos utilizando Docker, Nginx y servicios Cloud para
+                despliegues robustos.
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* CTA */}
-      <div className="relative z-10 flex justify-between items-end mt-16">
-        <a
-          href="#proyectos"
-          className="group flex items-center gap-4 font-mono text-sm cursor-pointer text-muted hover:text-primary transition-colors"
-        >
-          <span className="text-xl group-hover:translate-y-1 transition-transform text-primary">
-            ↓
-          </span>
-          Ver proyectos
-        </a>
-      </div>
+        {/* CTA HACIA PROYECTOS */}
+        <div className="relative z-10 flex justify-between items-end mt-10">
+          <a
+            href="#proyectos"
+            className="group flex items-center gap-3 font-mono text-xs cursor-pointer text-muted hover:text-primary transition-colors"
+          >
+            <span className="text-lg group-hover:translate-y-1 transition-transform text-primary">
+              ↓
+            </span>
+            [ EXECUTE_PROJECTS ]
+          </a>
+        </div>
+      </ScrollReveal>
     </section>
   );
 }

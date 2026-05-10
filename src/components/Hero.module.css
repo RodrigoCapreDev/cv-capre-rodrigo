@@ -45,3 +45,71 @@
   background: var(--primary, #22c55e);
   outline: 1px solid var(--primary, #22c55e);
 }
+
+
+/* CONTENEDOR DE LOS PANELES */
+.panelsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .panelsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ESTILO DE LA TARJETA (PANEL) */
+.panelCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 2px solid var(--primary, #4ade80);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.panelCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-4px);
+  border-top-color: var(--primary, #4ade80);
+  box-shadow: 0 10px 30px -15px rgba(0, 255, 0, 0.1); /* Brillo muy sutil */
+}
+
+/* CABECERA DEL PANEL (Título y flecha) */
+.panelHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.panelArrow {
+  color: rgba(255, 255, 255, 0.2);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.panelTitle {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: var(--primary, #4ade80);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* TEXTO DESCRIPTIVO */
+.panelText {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+  font-family: sans-serif;
+}

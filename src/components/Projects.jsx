@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <section
       id="proyectos"
-      className="min-h-screen bg-background text-text px-6 md:px-12 py-24 relative border-t border-white/10"
+      className="min-h-screen bg-background text-text px-6 md:px-12 py-8 relative border-t border-white/10"
     >
       {/* HEADER DE LA SECCIÓN */}
       <ScrollReveal>
