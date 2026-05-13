@@ -4,36 +4,46 @@
 
 @layer base {
   :root {
-    --background: #050505; /* Casi negro absoluto, para fundirse con el Home */
-    --text: #f8fafc;       /* Blanco humo para títulos */
-    --text-muted: #94a3b8; /* Gris azulado para textos secundarios */
+    /* Light theme (defaults) */
+    --background: #f8fafc; /* slate-50 */
+    --text: #0f172a; /* slate-900 */
+    --secondary-text: #475569; /* slate-600 */
+    --muted: #94a3b8; /* slate-400 */
 
-    /* --- TUS COLORES DE MARCA --- */
-    --primary: #059669;    /* Emerald 600 - Tu verde característico */
-    
-    /* --- TARJETAS Y ELEMENTOS --- */
-    /* La tarjeta debe ser sutilmente más clara que el fondo para destacar */
-    --card-bg: #0f172a;    /* Slate 900 */
-    
-    /* --- ACCENTOS --- */
-    --secondary: #1e293b;  /* Slate 800 - Para fondos de tags inactivos */
-    --secondary-text: #38bdf8; /* Sky 400 - Texto celeste brillante para tags */
-    --accent: #6366f1;     /* Indigo 500 - Botones de acción */
+    --primary: #059669; /* emerald-600 */
+    --secondary: #1e293b; /* slate-800 */
+    --accent: #6366f1; /* indigo-500 */
+
+    --success: #10b981; /* emerald-500 */
+    --danger: #ef4444; /* red-500 */
+
+    --card-bg: #ffffff; /* cards on light */
   }
+
+  /* Dark theme overrides when `.dark` class is present on root */
   .dark {
-    --text: #f1f5f9;
-    --background: #020617;
-    --primary: #34d399;
-    --secondary: #94a3b8;
-    --accent: #818cf8;
+    --background: #050505;
+    --text: #e6edf3;
+    --secondary-text: #94a3b8;
+    --muted: #64748b;
+
+    --primary: #34d399; /* emerald-400 */
+    --secondary: #0f172a;
+    --accent: #8b5cf6; /* violet-500 */
+
+    --success: #34d399;
+    --danger: #f87171;
+
+    --card-bg: #0f172a;
   }
 }
 
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #050505; /* El mismo negro que usas en el Hero */
-  color: #e6edf3; /* Tu color de texto base */
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 /* Efecto de líneas de TV antiguas (Scanlines) */
@@ -113,13 +123,13 @@ body, html {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #050505; 
+    background: var(--background);
   }
   ::-webkit-scrollbar-thumb {
-    background: #333; 
+    background: color-mix(in srgb, var(--text) 12%, black);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #059669; /* Tu color Primary */
+    background: var(--primary);
   }
 }

@@ -2,7 +2,8 @@ import { useLanguage } from "../context/LanguageContext.jsx";
 import TypedSnippet from "./TypedSnippet.jsx";
 import ProfileCard from "./ProfileCard.jsx";
 import TerminalAnimation from "./TerminalAnimation.jsx";
-import HeroSkillsPanel from "./HeroSkillsPanel.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
+//import HeroSkillsPanel from "./HeroSkillsPanel.jsx";
 
 export default function Hero() {
   const { t, lang, toggleLanguage } = useLanguage();
@@ -32,6 +33,10 @@ export default function Hero() {
         </div>
 
         <div className="text-right hidden md:block">
+          <div>
+            <ThemeToggle />
+          </div>
+
           <button
             onClick={toggleLanguage}
             className="font-mono text-xs text-muted hover:text-white transition-colors text-right mb-1"
