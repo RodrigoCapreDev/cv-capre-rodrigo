@@ -34,10 +34,23 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       aria-pressed={theme === 'dark'}
-      className="p-2 rounded-md bg-card-bg text-text hover:bg-primary/10 transition"
+      className="group relative w-full p-2.5 rounded-lg border border-secondary/30 bg-white/5 backdrop-blur-sm text-text hover:border-primary/50 transition-all duration-300 hover:bg-primary/10 font-mono text-xs tracking-widest uppercase"
       title={theme === 'dark' ? 'Cambiar a claro' : 'Cambiar a oscuro'}
     >
-      {theme === 'dark' ? '🌙' : '☀️'}
+      <span className="flex items-center justify-center gap-1.5">
+        {theme === 'dark' ? (
+          <>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            <span className="text-primary">◐ DARK</span>
+          </>
+        ) : (
+          <>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span className="text-accent">◑ LIGHT</span>
+          </>
+        )}
+      </span>
+      <div className="absolute inset-0 rounded-lg bg-primary/0 group-hover:bg-primary/5 transition-colors pointer-events-none"></div>
     </button>
   );
 }

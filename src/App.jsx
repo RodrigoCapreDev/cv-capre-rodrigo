@@ -7,13 +7,13 @@ import ScrollToTop from "./components/ScrollToTop";
 import CenteredLayout from "./components/CenteredLayout";
 import LoadingSequence from "./components/LoadingSequence";
 import ProfileCard from "./components/ProfileCard";
+import AsideControls from "./components/AsideControls";
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
   return (
     <div className="bg-background min-h-screen w-full relative overflow-hidden">
       <ScrollToTop />
-
       {!loadingComplete ? (
         <CenteredLayout>
           <div className="min-h-screen flex items-center justify-center">
@@ -21,12 +21,18 @@ function App() {
           </div>
         </CenteredLayout>
       ) : (
-        <CenteredLayout>
-          <ProfileCard />
-          <Skills />
-          <Projects />
-          <Footer />
-        </CenteredLayout>
+        <>
+          <AsideControls />
+          <CenteredLayout>
+            <ProfileCard />
+            <Skills />
+            <Projects />
+            {/*<Hero />
+            
+            <Footer />*/}
+          </CenteredLayout>
+        </>
+
       )}
     </div>
   );
