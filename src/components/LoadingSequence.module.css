@@ -1,0 +1,47 @@
+.terminal {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.header {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.line {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.prompt {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.text {
+  color: var(--text);
+}
+
+.output {
+  color: var(--success);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
