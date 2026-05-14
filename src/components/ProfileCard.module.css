@@ -1,7 +1,3 @@
-.card {
-  position: relative;
-}
-
 /* Dark mode: special border effect */
 :global(.dark) .card {
   background: #0d1f1a;
