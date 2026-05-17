@@ -1,4 +1,20 @@
 /* Contenedor para el texto con glitch */
+.terminalCursor {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 1rem;
+  margin-left:0.35rem;
+  animation: blinkCursor 1s steps(1)infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
 .glitchWrapper {
   position: relative;
   display: inline-block;

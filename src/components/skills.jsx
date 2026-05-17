@@ -25,9 +25,14 @@ export default function Skills() {
 
   return (
     <section
-      className="min-h-screen bg-background text-text px-6 md:px-12 py-8 relative border-t border-white/10"
+      className="mx-auto w-full mt-12 max-w-2xl px-4 sm:px-6"
       id="skills"
     >
+      <div className="w-full border rounded-xl bg-white dark:bg-card-bg/90 dark:border-white/10 mb-8 pb-4 !gap-0 flex items-center px-4 py-2 animate-fade-in-up">
+        <span className="text gap-0">{'>'} $ ls {t.skillsTitle}</span>
+        <span className={styles.terminalCursor} aria-hidden="true">▍</span>
+      </div>
+
       <ScrollReveal>
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-4">
           <div>

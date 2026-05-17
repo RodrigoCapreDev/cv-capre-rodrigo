@@ -8,12 +8,29 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <div className="bg-background min-h-screen w-full relative overflow-hidden">
-        <ScrollToTop />
-        <Hero />
-        <Skills />
-        <Projects />
-        <Footer />
-  </div>
+      <ScrollToTop />
+      {!loadingComplete ? (
+        <CenteredLayout>
+          <div className="min-h-screen flex items-center justify-center">
+            <LoadingSequence onComplete={() => setLoadingComplete(true)} />
+          </div>
+        </CenteredLayout>
+      ) : (
+        <>
+          <AsideControls />
+          <CenteredLayout>
+            <ProfileCard />
+            <Skills />
+            {/*
+            <Projects />
+            <Hero />
+            
+            <Footer />*/}
+          </CenteredLayout>
+        </>
+
+      )}
+    </div>
   );
 }
 

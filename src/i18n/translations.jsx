@@ -25,7 +25,7 @@ export const translations = {
       </>
     ),
 
-    skillsTile: "STACK_TECNOLÓGICO",
+    skillsTitle: "stack_tecnológico",
     skillsSubtitle: "HERRAMIENTAS Y TECNOLOGÍAS QUE USO PARA CONSTRUIR SOLUCIONES",
     // Stack labels
     stackCore: "LENGUAJES",
@@ -73,6 +73,7 @@ export const translations = {
     ),
 
     // Stack labels
+    skillsTitle: "tech_stack",
     stackCore: "LANGUAGES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / CLOUD",
