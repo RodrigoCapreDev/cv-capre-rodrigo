@@ -1,0 +1,26 @@
+/* Dark mode: special border effect */
+:global(.dark) .card {
+  background: #0d1f1a;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+}
+
+.border {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+
+/* Show border only in dark mode */
+:global(.dark) .border {
+  display: block;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+  padding: 1px;
+  background: linear-gradient(135deg, #22c55e, #0ea5e9);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
