@@ -28,7 +28,7 @@ export default function Skills() {
       className="mx-auto w-full mt-12 max-w-2xl px-4 sm:px-6"
       id="skills"
     >
-      <div className="w-full border rounded-xl bg-white dark:bg-card-bg/90 dark:border-white/10 mb-8 pb-4 !gap-0 flex items-center px-4 py-2 animate-fade-in-up">
+      <div className="w-full border rounded-xl bg-white dark:bg-background dark:border-white/10 mb-8 pb-4 !gap-0 flex items-center px-4 py-2 animate-fade-in-up">
         <span className="text gap-0">{'>'} $ ls {t.skillsTitle}</span>
         <span className={styles.terminalCursor} aria-hidden="true">▍</span>
       </div>
