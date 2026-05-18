@@ -25,12 +25,37 @@ export const translations = {
       </>
     ),
 
-    skillsTitle: "stack_tecnológico",
+    skillsTitle: "Stack Tecnológico",
     skillsSubtitle: "HERRAMIENTAS Y TECNOLOGÍAS QUE USO PARA CONSTRUIR SOLUCIONES",
     // Stack labels
     stackCore: "LENGUAJES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / NUBE",
+    skillsCommand: "stack_tecnologico",
+    skillsNote:
+      "Trabajo con una mirada de ingenieria: entender el problema, definir la estructura correcta, automatizar lo repetible y dejar el sistema facil de mantener.",
+    skillsSignal: "signal over decoration",
+    skillsFocus: "engineering first",
+    skillAreas: [
+      {
+        code: "/core-systems",
+        label: "CORE SYSTEMS",
+        summary: "APIs, reglas de negocio, flujo de datos y estructura backend.",
+        skills: ["Python", "Django REST", "SQL", "Testing"],
+      },
+      {
+        code: "/delivery-infra",
+        label: "DELIVERY / INFRA",
+        summary: "Contenedores, despliegue y administracion de entornos.",
+        skills: ["Docker", "Azure", "Linux", "Git"],
+      },
+      {
+        code: "/engineering-practice",
+        label: "ENGINEERING PRACTICE",
+        summary: "Mantenibilidad, automatizacion y organizacion del codigo.",
+        skills: ["Refactoring", "Documentation", "Automation", "Reviews"],
+      },
+    ],
 
     // Footer
     cta: "[ /cd stack | ls ]",
@@ -73,10 +98,35 @@ export const translations = {
     ),
 
     // Stack labels
-    skillsTitle: "tech_stack",
+    skillsTitle: "Technology Stack",
     stackCore: "LANGUAGES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / CLOUD",
+    skillsCommand: "tech_stack",
+    skillsNote:
+      "I work with an engineering mindset: understand the problem, define the right structure, automate repeatable work and keep systems easy to maintain.",
+    skillsSignal: "signal over decoration",
+    skillsFocus: "engineering first",
+    skillAreas: [
+      {
+        code: "/core-systems",
+        label: "CORE SYSTEMS",
+        summary: "APIs, business rules, data flow and backend structure.",
+        skills: ["Python", "Django REST", "SQL", "Testing"],
+      },
+      {
+        code: "/delivery-infra",
+        label: "DELIVERY / INFRA",
+        summary: "Containers, deployment paths and environment operations.",
+        skills: ["Docker", "Azure", "Linux", "Git"],
+      },
+      {
+        code: "/engineering-practice",
+        label: "ENGINEERING PRACTICE",
+        summary: "Maintainability, automation and code organization.",
+        skills: ["Refactoring", "Documentation", "Automation", "Reviews"],
+      },
+    ],
 
     // Footer
     cta: "[ VIEW EXPERIENCE & PROJECTS ]",

@@ -2,154 +2,93 @@ import { useLanguage } from "../context/LanguageContext.jsx";
 import ScrollReveal from "./ScrollReveal.jsx";
 import styles from "./Skills.module.css";
 
-const SKILLS = [
-  {
-    category: "stackCore",
-    label: "CORE",
-    skills: ["PYTHON", "JS", "C#", "SQL"],
-  },
-  {
-    category: "stackWeb",
-    label: "WEB",
-    skills: ["REACT", "HTML", "DJANGO"],
-  },
-  {
-    category: "stackInfra",
-    label: "DEVOPS / INFRA",
-    skills: ["GIT", "GITHUB", "DOCKER", "AZURE", "LINUX"],
-  },
-];
-
 export default function Skills() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const skillAreas = t.skillAreas ?? [];
 
   return (
     <section
-      className="mx-auto w-full mt-12 max-w-2xl px-4 sm:px-6"
+      className="mx-auto w-full mt-16 max-w-2xl px-4 sm:px-6"
       id="skills"
     >
-      <div className="w-full border rounded-xl bg-white dark:bg-background dark:border-white/10 mb-8 pb-4 !gap-0 flex items-center px-4 py-2 animate-fade-in-up">
-        <span className="text gap-0">{'>'} $ ls {t.skillsTitle}</span>
-        <span className={styles.terminalCursor} aria-hidden="true">▍</span>
-      </div>
-
       <ScrollReveal>
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-4">
-          <div>
-            <div className={styles.glitchWrapper}>
-              <h2
-                className={`${styles.glitchTitle} font-['Archivo_Black'] text-4xl md:text-5xl uppercase`}
-                data-text={t.skillsTile}
-              >
-                {t.skillsTile}
-              </h2>
-              <p className="font-mono text-primary text-sm tracking-widest mt-2">
-                // {t.skillsSubtitle}
-              </p>
-            </div>
-            {/*}
-            <h2 className="font-['Archivo_Black'] text-4xl md:text-5xl uppercase text-white bg-clip-text">
-              {t.skillsTile}
-            </h2>
-            <p className="font-mono text-primary text-sm tracking-widest mt-2">
-              // {t.skillsSubtitle}
-            </p>*/}
-          </div>
-          <div className="font-mono text-xs text-muted hidden md:block">
-            DIR: /ROOT/SKILLS
-          </div>
-
-          <div className="absolute -bottom-12 left-8 w-px h-12 bg-gradient-to-b from-primary/50 to-transparent md:hidden"></div>
-        </div>
-
-        {/* CONTENIDO */}
-        <div className="relative z-10 w-full">
-          {/* GRID DE SKILLS (MÓDULOS TIPO TERMINAL) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
-            {SKILLS.map((item, idx) => (
-              <div
-                key={idx}
-                className="group border border-white/10 bg-white/[0.02] p-6 rounded-md hover:border-primary hover:bg-primary/5 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
-                style={{
-                  animationDelay: `${idx * 0.1}s`,
-                  animationFillMode: "backwards",
-                }}
-              >
-                {/* HEADER DE LA CARD */}
-                <div className="flex items-center gap-3 mb-6">
-                  {/* Punto de estado con resplandor neón */}
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_currentColor] text-primary"></span>
-                  <span className="font-mono text-xs tracking-[0.2em] text-white/50 group-hover:text-primary/70 transition-colors">
-                    {item.label}
+        <div className="rounded-2xl border border-black/10 bg-background/85 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] dark:border-white/10 dark:bg-card-bg/80">
+          <div className="px-4 py-5 sm:px-6 sm:py-6">
+            <div className="flex items-start gap-4 pb-2">
+              <div className="flex-1 space-y-3">
+                <div className="rounded-lg border border-black/10 bg-white/35 px-3 py-2 font-mono text-sm text-muted dark:border-white/10 dark:bg-white/[0.02] sm:text-base">
+                  <span className="text-primary">$</span> cat {t.skillsCommand}
+                  .md
+                  <span className={styles.terminalCursor} aria-hidden="true">
+                    ▍
                   </span>
                 </div>
 
-                {/* CUERPO DE LA CARD */}
-                <div className="flex flex-wrap gap-x-4 gap-y-2">
-                  {(Array.isArray(item.skills)
-                    ? item.skills
-                    : [item.skills]
-                  ).map((s, i) => (
-                    <span
-                      key={i}
-                      className="font-mono text-[0.95rem] font-light text-white/80"
-                    >
-                      {s}
+                <h2 className="flex border-b border-black/10 dark:border-white/10 pb-4 items-baseline gap-3 text-3xl md:text-[2.75rem] font-medium tracking-[0.03em] text-text">
+                  <span className="leading-none">{t.skillsTitle}</span>
+                </h2>
+
+                <p className="max-w-xl border-l border-primary/25 pl-3 font-mono text-sm leading-7 text-secondary-text sm:text-base">
+                  {t.skillsSubtitle}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-5 rounded-xl border border-black/10 bg-white/35 px-5 py-5 font-mono text-sm leading-7 text-text/90 dark:border-white/10 dark:bg-white/[0.02] sm:px-6 sm:py-6">
+              <p>{t.skillsNote}</p>
+            </div>
+
+            <div className="mt-6 space-y-4">
+              {skillAreas.map((item) => (
+                <div
+                  key={item.code}
+                  className="group sm:p-6 
+                  hover:bg-primary hover:border hover:rounded-lg
+                  dark:border dark:rounded-lg dark:border-background
+                  dark:hover:border-primary/35 dark:hover:bg-background dark:hover:text-primary"
+                >
+                  <div className="flex items-start justify-between gap-4 border-b border-dashed border-black/10 pb-3 dark:border-white/10">
+                    <div className="min-w-0">
+                      {/*<div className="font-mono text-[11px] tracking-[0.24em] text-muted">
+                        {item.code}
+                      </div>*/}
+                      <h3 className="mt-1 font-mono text-sm uppercase tracking-[0.18em] text-text sm:text-[15px]">
+                        {item.label}
+                      </h3>
+                    </div>
+                    {/*<span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-primary shadow-[0_0_8px_currentColor]" />*/}
+                  </div>
+
+                  <p className="mt-4 max-w-xl font-mono text-sm leading-6 text-secondary-text">
+                    {item.summary}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {item.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-md border border-black/10 bg-background/70 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.16em] text-text/90 dark:border-white/10"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 flex items-center justify-between border-t border-dashed border-black/10 pt-3 font-mono text-[10px] tracking-[0.22em] text-muted dark:border-white/10">
+                    <span>
+                      {lang === "es" ? "ESTADO: LISTO" : "STATUS: READY"}
                     </span>
-                  ))}
+                    <span>OK_</span>
+                  </div>
                 </div>
-
-                {/* FOOTER DE LA CARD (Con borde punteado) */}
-                <div className="mt-8 pt-4 border-t border-dashed border-white/10 flex justify-between items-center">
-                  <span className="font-mono text-[10px] text-white/20 group-hover:text-primary/40 transition-colors">
-                    STATUS: OK_
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* DESCRIPCIÓN TÉCNICA (PANELES) */}
-          <div className={styles.panelsContainer}>
-            {/* PANEL 1: BACKEND */}
-            <div className={styles.panelCard}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelArrow}>{">"}</span>
-                <h3 className={styles.panelTitle}>BACKEND && ARCHITECTURE</h3>
-              </div>
-              <p className={styles.panelText}>
-                Enfocado en la construcción de APIs escalables con Django REST
-                Framework y la optimización de procesos mediante lógica de
-                ingeniería.
-              </p>
+              ))}
             </div>
 
-            {/* PANEL 2: SYSTEMS */}
-            <div className={styles.panelCard}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelArrow}>{">"}</span>
-                <h3 className={styles.panelTitle}>SYSTEMS && DEPLOYMENT</h3>
-              </div>
-              <p className={styles.panelText}>
-                Experiencia en virtualización y orquestación de entornos
-                productivos utilizando Docker, Nginx y servicios Cloud para
-                despliegues robustos.
-              </p>
+            <div className="mt-7 flex flex-col items-center justify-center gap-2 border-t border-black/10 pt-4 text-center font-mono text-[11px] uppercase tracking-[0.24em] text-muted dark:border-white/10 sm:flex-row sm:gap-3">
+              <span>{t.skillsSignal}</span>
+              <span className="text-primary/80">// {t.skillsFocus}</span>
             </div>
           </div>
-        </div>
-
-        {/* CTA HACIA PROYECTOS */}
-        <div className="relative z-10 flex justify-between items-end mt-10">
-          <a
-            href="#proyectos"
-            className="group flex items-center gap-3 font-mono text-xs cursor-pointer text-muted hover:text-primary transition-colors"
-          >
-            <span className="text-lg group-hover:translate-y-1 transition-transform text-primary">
-              ↓
-            </span>
-            [ EXECUTE_PROJECTS ]
-          </a>
         </div>
       </ScrollReveal>
     </section>

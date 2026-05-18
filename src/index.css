@@ -6,11 +6,14 @@
   :root {
     /* Light theme (defaults) */
     --background: #f8fafc; /* slate-50 */
+    --background-rgb: 248 250 252;
+    
     --text: #0f172a; /* slate-900 */
     --secondary-text: #475569; /* slate-600 */
     --muted: #94a3b8; /* slate-400 */
 
     --primary: #059669; /* emerald-600 */
+    --primary-rgb: 5 150 105; 
     --secondary: #0ea5e9; /* sky-500 */
     --accent: #6366f1; /* indigo-500 */
 
@@ -23,11 +26,14 @@
   /* Dark theme overrides when `.dark` class is present on root */
   .dark {
     --background: #050505;
+    --background-rgb: 5 5 5;
+
     --text: #e6edf3;
     --secondary-text: #94a3b8;
     --muted: #64748b;
 
     --primary: #34d399; /* emerald-400 */
+    --primary-rgb: 52 211 153;
     --secondary: #0ea5e9; /* sky-500 */
     --accent: #8b5cf6; /* violet-500 */
 
