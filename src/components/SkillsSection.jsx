@@ -1,8 +1,9 @@
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import ScrollReveal from "./ScrollReveal.jsx";
 import styles from "./Skills.module.css";
 
-export default function Skills() {
+export default function SkillsSection() {
   const { t, lang } = useLanguage();
   const skillAreas = t.skillAreas ?? [];
 
@@ -12,11 +13,20 @@ export default function Skills() {
       id="skills"
     >
       <ScrollReveal>
-        <div className="rounded-2xl bg-background/85 
-        dark:border-white/10 dark:bg-card-bg/80">
-          <h2 className="font-mono text-lg tracking-[0.215em] text-text uppercase pb-4">
-            {t.skillsTitle}
-          </h2>
+        <div className="rounded-2xl border border-black/10 bg-background/85 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] dark:border-white/10 dark:bg-card-bg/80">
+          <div className="px-4 py-5 sm:px-6 sm:py-6">
+            <div className="flex items-start gap-4 pb-2">
+              <div className="flex-1 space-y-3">
+
+                <h2 className="flex border-b border-black/10 dark:border-white/10 pb-4 items-baseline gap-3 text-3xl md:text-[2.75rem] font-medium tracking-[0.03em] text-text">
+                  <span className="leading-none">{t.skillsTitle}</span>
+                </h2>
+
+                <p className="max-w-xl border-l border-primary/25 pl-3 font-mono text-sm leading-7 text-secondary-text sm:text-base">
+                  {t.skillsSubtitle}
+                </p>
+              </div>
+            </div>
 
           <div className="mt-6 space-y-4">
             {skillAreas.map((item) => (
@@ -70,4 +80,4 @@ export default function Skills() {
       </ScrollReveal>
     </section>
   );
-}
+} 

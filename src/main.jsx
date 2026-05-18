@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { LanguageProvider } from './context/LanguageContext.jsx';
+import { SectionProvider } from './context/SectionContext.jsx';
 import './index.css';
 import App from './App.jsx';
 
@@ -15,7 +16,7 @@ try {
   }
 
   // Helper global para alternar tema desde la UI si lo deseas
-  window.toggleTheme = function(newTheme) {
+  window.toggleTheme = function (newTheme) {
     if (newTheme === 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -36,7 +37,9 @@ try {
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <LanguageProvider>
-      <App />
+      <SectionProvider>
+        <App />
+      </SectionProvider>
     </LanguageProvider>
   </StrictMode>,
 )
