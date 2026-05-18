@@ -26,7 +26,7 @@ export const translations = {
     ),
 
     skillsTitle: "Stack Tecnológico",
-    skillsSubtitle: "HERRAMIENTAS Y TECNOLOGÍAS QUE USO PARA CONSTRUIR SOLUCIONES",
+    skillsSubtitle: "Herramientas, lenguajes y prácticas que definen mi enfoque de desarrollo.",
     // Stack labels
     stackCore: "LENGUAJES",
     stackWeb: "WEB STACK",

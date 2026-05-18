@@ -1,7 +1,6 @@
 import { useLanguage } from "../context/LanguageContext.jsx";
 import TypedSnippet from "./TypedSnippet.jsx";
 import ProfileCard from "./ProfileCard.jsx";
-import TerminalAnimation from "./TerminalAnimation.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
 //import HeroSkillsPanel from "./HeroSkillsPanel.jsx";
 

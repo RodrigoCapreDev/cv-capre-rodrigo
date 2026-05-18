@@ -1,8 +1,9 @@
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import ScrollReveal from "./ScrollReveal.jsx";
 import styles from "./Skills.module.css";
 
-export default function Skills() {
+export default function SkillsSection() {
   const { t, lang } = useLanguage();
   const skillAreas = t.skillAreas ?? [];
 
@@ -16,13 +17,6 @@ export default function Skills() {
           <div className="px-4 py-5 sm:px-6 sm:py-6">
             <div className="flex items-start gap-4 pb-2">
               <div className="flex-1 space-y-3">
-                <div className="rounded-lg border border-black/10 bg-white/35 px-3 py-2 font-mono text-sm text-muted dark:border-white/10 dark:bg-white/[0.02] sm:text-base">
-                  <span className="text-primary">$</span> cat {t.skillsCommand}
-                  .md
-                  <span className={styles.terminalCursor} aria-hidden="true">
-                    ▍
-                  </span>
-                </div>
 
                 <h2 className="flex border-b border-black/10 dark:border-white/10 pb-4 items-baseline gap-3 text-3xl md:text-[2.75rem] font-medium tracking-[0.03em] text-text">
                   <span className="leading-none">{t.skillsTitle}</span>
@@ -32,10 +26,6 @@ export default function Skills() {
                   {t.skillsSubtitle}
                 </p>
               </div>
-            </div>
-
-            <div className="mt-5 rounded-xl border border-black/10 bg-white/35 px-5 py-5 font-mono text-sm leading-7 text-text/90 dark:border-white/10 dark:bg-white/[0.02] sm:px-6 sm:py-6">
-              <p>{t.skillsNote}</p>
             </div>
 
             <div className="mt-6 space-y-4">
@@ -93,4 +83,4 @@ export default function Skills() {
       </ScrollReveal>
     </section>
   );
-}
+} 
