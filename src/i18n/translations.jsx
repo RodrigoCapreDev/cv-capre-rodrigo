@@ -62,6 +62,7 @@ export const translations = {
     langLabel: "IDIOMA",
     projectsTitle: "MÓDULOS_DESARROLLADOS",
     projectsSubtitle: "EXPERIENCIA PRÁCTICA & ARQUITECTURA",
+    projectsCommand: "proyectos",
 
     project1: {
       id: "PROY_01",
@@ -135,6 +136,7 @@ export const translations = {
     // NEW SECTION: PROJECTS
     projectsTitle: "DEVELOPED_MODULES",
     projectsSubtitle: "PRACTICAL EXPERIENCE & ARCHITECTURE",
+    projectsCommand: "projects",
 
     project1: {
       id: "PROJ_01",

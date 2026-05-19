@@ -5,7 +5,7 @@ export default function ProfileCard() {
   const { t } = useLanguage();
 
   return (
-    <section className="mx-auto w-full max-w-2xl px-4 sm:px-6">
+    <section className="mx-auto w-full max-w-2xl px-4 pt-8 pb-8 sm:px-6">
       <div className="space-y-4">
         <p className="text-[11px] uppercase tracking-[0.35em] text-secondary-text/80">
           Hola, soy Rodrigo

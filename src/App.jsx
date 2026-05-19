@@ -15,7 +15,7 @@ function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
   const { activeSection } = useSection();
   return (
-    <div className="bg-background min-h-screen w-full relative overflow-hidden">
+    <div className="bg-background min-h-screen w-full relative">
       <ScrollToTop />
       {!loadingComplete ? (
         <CenteredLayout>
@@ -27,10 +27,10 @@ function App() {
         <>
           <AsideControls />
           <CenteredLayout>
-            <ProfileCard />
             <Terminal />
-            {activeSection === 'stack' && <SkillsSection />}
-            {activeSection === 'proyectos' && <Projects />}
+            <ProfileCard />
+            <SkillsSection />
+            <Projects />
             {/*activeSection === 'help' && <HelpPanel />*/}
 
 
