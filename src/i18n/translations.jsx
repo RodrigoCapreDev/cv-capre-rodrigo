@@ -66,14 +66,22 @@ export const translations = {
 
     project1: {
       id: "PROY_01",
-      name: "SISTEMA DE GESTIÓN DE CAFES",
-      type: "FULLSTACK / INFRA",
-      desc: "Desarrollé una plataforma integral para la gestión de productos de cafetería. Implementé una API REST con Django REST Framework, un frontend dinámico con React. El diseño fue construido desde cero utilizando CSS moderno con una arquitectura de variables personalizadas. Logré un entorno de despliegue profesional mediante la contenerización con Docker y la configuración de Nginx como servidor de producción y proxy inverso.",
-      tech: ["React", "Django", "PostgreSQL", "Docker", "Azure"],
-      status: "EN DESARROLLO - PRÓXIMAMENTE DEPLOY",
-      linkCode: "VER CÓDIGO",
-      linkDemo: "DEPLOY",
+      name: "QUICKSOLUTIONS - GESTIÓN DE SERVICIOS",
+      type: "FULLSTACK / SERVERLESS",
+      desc: "Desarrollé un sistema integral basado en un motor de máquinas de estados para gestionar solicitudes de servicio técnico de principio a fin, garantizando trazabilidad total del ciclo de vida. Implementé la persistencia de datos en la nube utilizando Supabase y configuré una arquitectura serverless con funciones de AWS Lambda para automatizar notificaciones y eventos del sistema.",
+      tech: ["React", "Django REST", "Supabase", "AWS Lambda"],
+      status: "COMPLETADO",
+      github: "https://github.com/QuickSolutionsUTN/Cloud-QuickSolutions",
     },
+    project2: {
+      id: "PROY_02",
+      name: "SISTEMA DE GESTIÓN DE INVENTARIO",
+      type: "FULLSTACK / INFRA",
+      desc: "Diseñé y desarrollé una aplicación web CRUD para administrar catálogos de productos, incluyendo un panel de administración y una interfaz pública en tiempo real. Construí la comunicación cliente-servidor mediante una API REST y me encargué de la infraestructura: contenericé el entorno con Docker para mayor portabilidad y realicé el despliegue en un servidor Linux en Microsoft Azure, configurando la red y la seguridad.",
+      tech: ["React", "Django REST", "PostgreSQL", "Docker", "Azure"],
+      status: "COMPLETADO",
+      github: "https://github.com/RodrigoCapreDev/Coffee-Management-System",
+    }
   },
 
   en: {
@@ -139,14 +147,22 @@ export const translations = {
     projectsCommand: "projects",
 
     project1: {
-      id: "PROJ_01",
+      id: "PROY_01",
+      name: "QUICKSOLUTIONS - SERVICE MANAGEMENT",
+      type: "FULLSTACK / SERVERLESS",
+      desc: "Developed a comprehensive system based on a state machine engine to manage technical service requests from end to end, ensuring full lifecycle traceability. Implemented cloud data persistence using Supabase and configured a serverless architecture with AWS Lambda functions to automate notifications and system events.",
+      tech: ["React", "Django REST", "Supabase", "AWS Lambda"],
+      status: "COMPLETED",
+      github: "https://github.com/QuickSolutionsUTN/Cloud-QuickSolutions",
+    },
+    project2: {
+      id: "PROY_02",
       name: "INVENTORY MANAGEMENT SYSTEM",
       type: "FULLSTACK / INFRA",
-      desc: "SPA platform for comprehensive stock management. Designed with decoupled architecture (Frontend/Backend) and cloud deployed.",
-      tech: ["React", "Django", "PostgreSQL", "Docker", "Azure"],
+      desc: "Designed and developed a CRUD web application to manage product catalogs, including an admin panel and a real-time public interface. Built client-server communication via a REST API and managed the infrastructure: containerized the environment with Docker for portability and deployed it on a Linux server in Microsoft Azure, configuring networking and security.",
+      tech: ["React", "Django REST", "PostgreSQL", "Docker", "Azure"],
       status: "COMPLETED",
-      linkCode: "VIEW CODE",
-      linkDemo: "DEPLOY",
-    },
+      github: "https://github.com/RodrigoCapreDev/Coffee-Management-System",
+    }
   },
 };

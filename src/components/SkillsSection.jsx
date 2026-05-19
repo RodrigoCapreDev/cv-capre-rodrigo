@@ -18,7 +18,6 @@ export default function SkillsSection() {
             {t.skillsTitle}
           </h2>
 
-
           <div className="mt-6 space-y-4">
             {skillAreas.map((item) => (
               <div

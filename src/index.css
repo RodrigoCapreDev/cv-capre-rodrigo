@@ -15,8 +15,10 @@
     --primary: #059669; /* emerald-600 */
     --primary-rgb: 5 150 105; 
     --secondary: #0ea5e9; /* sky-500 */
+    --secondary-rgb: 14 165 233;
+    
     --accent: #6366f1; /* indigo-500 */
-
+    --accent-rgb: 99 102 241;
     --success: #10b981; /* emerald-500 */
     --danger: #ef4444; /* red-500 */
 
@@ -35,8 +37,10 @@
     --primary: #34d399; /* emerald-400 */
     --primary-rgb: 52 211 153;
     --secondary: #0284c7; /* sky-500 */
-    --accent: #8b5cf6; /* violet-500 */
+    --secondary-rgb: 2 132 199;
 
+    --accent: #8b5cf6; /* violet-500 */
+    --accent-rgb: 139 92 246;
     --success: #34d399;
     --danger: #f87171;
 

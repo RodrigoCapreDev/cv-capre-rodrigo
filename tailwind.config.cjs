@@ -24,7 +24,7 @@ module.exports = {
         "secondary-text": "var(--secondary-text)",
         background: "rgb(var(--background-rgb) / <alpha-value>)",
         primary: "rgb(var(--primary-rgb) / <alpha-value>)",
-        secondary: "var(--secondary)",
+        secondary: "rgb(var(--secondary-rgb) / <alpha-value>)",
         accent: "var(--accent)",
         muted: "var(--muted)",
         success: "var(--success)",
