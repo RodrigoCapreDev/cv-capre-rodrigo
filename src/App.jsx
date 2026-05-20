@@ -25,21 +25,13 @@ function App() {
         </CenteredLayout>
       ) : (
         <>
-          <AsideControls />
+          {/*<AsideControls />*/}
           <CenteredLayout>
             <Terminal />
             <ProfileCard />
             <SkillsSection />
             <Projects />
-            {/*activeSection === 'help' && <HelpPanel />*/}
-
-
-            {/*
-            <Skills />
-            <Projects />
-            <Hero />
-            
-            <Footer />*/}
+            {/*<Footer />*/}
           </CenteredLayout>
         </>
 
