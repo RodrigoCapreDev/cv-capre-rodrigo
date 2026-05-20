@@ -1,14 +1,6 @@
 export const translations = {
   es: {
-    // Header
-    systemOnline: "SISTEMA_ONLINE",
-    role: "DEVELOPER TRAINEE",
-    level: "5TO AÑO ING. EN SISTEMAS",
-
-    // Hero Principal
-    title1: "SOFTWARE",
-    title2: "DEVELOPER",
-
+    profileCommand: "perfil",
     // Ficha Técnica
     labelProfile: "( Perfil Profesional )",
     profileDesc: (
@@ -24,13 +16,13 @@ export const translations = {
       </>
     ),
 
+    stackCommand: "stack_tecnologico",
     skillsTitle: "Stack Tecnológico",
     skillsSubtitle: "Herramientas, lenguajes y prácticas que definen mi enfoque de desarrollo.",
     // Stack labels
     stackCore: "LENGUAJES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / NUBE",
-    skillsCommand: "stack_tecnologico",
     skillsNote:
       "Trabajo con una mirada de ingenieria: entender el problema, definir la estructura correcta, automatizar lo repetible y dejar el sistema facil de mantener.",
     skillsSignal: "signal over decoration",
@@ -84,15 +76,8 @@ export const translations = {
   },
 
   en: {
-    // Header
-    systemOnline: "SYSTEM_ONLINE",
-    role: "TRAINEE DEV",
-    level: "4TH YEAR ENG. STUDENT",
 
-    // Hero Principal
-    title1: "SOFTWARE",
-    title2: "DEVELOPER",
-
+    profileCommand: "profile",
     // Ficha Técnica
     labelProfile: "( Professional Profile )",
     profileDesc: (
@@ -109,11 +94,11 @@ export const translations = {
     ),
 
     // Stack labels
+    stackCommand: "tech_stack",
     skillsTitle: "Technology Stack",
     stackCore: "LANGUAGES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / CLOUD",
-    skillsCommand: "tech_stack",
     skillsNote:
       "I work with an engineering mindset: understand the problem, define the right structure, automate repeatable work and keep systems easy to maintain.",
     skillsSignal: "signal over decoration",

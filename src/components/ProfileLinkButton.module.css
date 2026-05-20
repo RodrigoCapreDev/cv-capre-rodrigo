@@ -1,0 +1,111 @@
+@keyframes sweep {
+  0%   { left: -60%; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1.25rem 1rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background: transparent;
+  font-family: 'Courier New', monospace;
+  text-decoration: none;
+  color: var(--secondary-text);
+  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+  width: 12rem;
+  flex: 0 0 12rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+:global(.dark) .card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -60%;
+  width: 50%;
+  height: calc(100% + 4px);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  animation: sweep 0.65s ease-in-out forwards;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+:global(.dark) .icon {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  text-align: center;
+}
+
+.sub {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+  margin-top: -4px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: 100%;
+    flex: 0 0 100%;
+    height: 6rem;
+    max-height: 6rem;
+  }
+
+  .label, .sub {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

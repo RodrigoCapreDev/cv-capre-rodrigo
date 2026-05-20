@@ -10,7 +10,7 @@ export default function SkillsSection() {
   return (
     <section
       className="mx-auto w-full mt-12 max-w-2xl px-4 pt-6 pb-8 sm:px-6"
-      id="skills"
+      id="stack"
     >
       <ScrollReveal>
         <div className="bg-background/85">

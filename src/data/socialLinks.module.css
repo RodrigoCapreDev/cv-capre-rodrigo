@@ -1,0 +1,29 @@
+/* GitHub — primary (emerald) */
+.github:hover {
+  color: var(--primary);
+  border-color: rgba(var(--primary-rgb), 0.4);
+}
+.github:hover .icon {
+  border-color: rgba(var(--primary-rgb), 0.35);
+  background: rgba(var(--primary-rgb), 0.08);
+}
+
+/* LinkedIn — secondary (sky) */
+.linkedin:hover {
+  color: var(--secondary);
+  border-color: rgba(var(--secondary-rgb), 0.4);
+}
+.linkedin:hover .icon {
+  border-color: rgba(var(--secondary-rgb), 0.35);
+  background: rgba(var(--secondary-rgb), 0.08);
+}
+
+/* CV — accent (violet) */
+.cv:hover {
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.4);
+}
+.cv:hover .icon {
+  border-color: rgba(var(--accent-rgb), 0.35);
+  background: rgba(var(--accent-rgb), 0.08);
+}
