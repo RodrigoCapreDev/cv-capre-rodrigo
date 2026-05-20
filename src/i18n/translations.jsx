@@ -13,15 +13,14 @@ export const translations = {
     labelProfile: "( Perfil Profesional )",
     profileDesc: (
       <>
-        Estudiante de 5to año de Ingeniería en Sistemas enfocado en el
-        desarrollo Fullstack. Experiencia en la creación de aplicaciones
-        integrales con React y Django, con fuerte énfasis en la calidad del
-        software y la automatización mediante Docker. Busco aplicar mi
-        pensamiento lógico y formación técnica en proyectos desafiantes y
-        escalables.
-        <span className="text-white font-medium"> Python</span>,
-        <span className="text-white font-medium"> JavaScript</span> y
-        <span className="text-white font-medium"> Azure</span>.
+        Como estudiante de último año de Ingeniería en Sistemas, 
+        disfruto el desafío de resolver problemas complejos. 
+        Me enfoco en crear soluciones eficientes, involucrándome desde el análisis de las 
+        necesidades del sistema hasta la escritura del código. Mi formación técnica en electrónica 
+        me dio una base sólida en lógica y troubleshooting que hoy traslado al desarrollo. 
+        Soy metódico por naturaleza, tanto para armar arquitecturas como para organizar mi rutina. 
+        Fuera de la pantalla, seguro me encuentres entrenando en el gimnasio, inmerso en algún 
+        juego de rol y supervivencia, o investigando sobre nuevas tecnologías.
       </>
     ),
 
@@ -98,11 +97,14 @@ export const translations = {
     labelProfile: "( Professional Profile )",
     profileDesc: (
       <>
-        Advanced Information Systems Engineering student (UTN FRLP) passionate
-        about logic. Merging engineering analysis with practical experience in
-        <span className="text-white font-medium"> Python</span>,
-        <span className="text-white font-medium"> JavaScript</span>, and
-        <span className="text-white font-medium"> Azure</span>.
+        As a final-year Information Systems Engineering student, 
+        I enjoy the challenge of solving complex problems. 
+        I focus on creating efficient solutions, getting involved from analyzing 
+        system requirements all the way to writing the code. My technical background in 
+        electronics gave me a solid foundation in logic and troubleshooting that 
+        I now bring into development. I am methodical by nature, whether I'm building architectures 
+        or organizing my routine. Off-screen, you'll likely find me working out at the gym, 
+        immersed in a survival RPG, or researching new technologies.
       </>
     ),
 

@@ -56,6 +56,19 @@
   }
 }
 
+.enterButtonBlink {
+  animation: enterBlink 1s ease-in-out infinite;
+}
+
+@keyframes enterBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 /* CONTENEDOR DE LOS PANELES */
 .panelsContainer {
   display: grid;
