@@ -16,7 +16,7 @@ const fadeUp = {
 
 export default function ProfileCard() {
   const { t } = useLanguage();
-  const { activeSection, setActiveSection } = useSection();
+  const { activeSection, setActiveSection, handleScrollTo } = useSection();
 
   return (
     <section
@@ -72,7 +72,7 @@ export default function ProfileCard() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
         onClick={() => {
-          setActiveSection("stack");
+          handleScrollTo("stack");
         }}
         aria-label="Deslizar hacia abajo"
         className="mt-1 w-32 inline-flex flex-col items-center gap-1 

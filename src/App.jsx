@@ -14,13 +14,19 @@ import SkillsSection from "./components/SkillsSection";
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
   const { activeSection } = useSection();
+
+  const handleLoadingComplete = () => {
+    window.dispatchEvent(new CustomEvent("loadingSequenceComplete"));
+    setLoadingComplete(true);
+  };
+
   return (
     <div className="bg-background min-h-screen w-full relative">
       <ScrollToTop />
       {!loadingComplete ? (
         <CenteredLayout>
           <div className="min-h-screen flex items-center justify-center">
-            <LoadingSequence onComplete={() => setLoadingComplete(true)} />
+            <LoadingSequence onComplete={handleLoadingComplete} />
           </div>
         </CenteredLayout>
       ) : (
@@ -34,7 +40,6 @@ function App() {
             {/*<Footer />*/}
           </CenteredLayout>
         </>
-
       )}
     </div>
   );

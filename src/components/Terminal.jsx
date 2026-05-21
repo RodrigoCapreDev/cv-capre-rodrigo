@@ -1,4 +1,4 @@
-import { use, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import ScrollReveal from "./ScrollReveal.jsx";
 import styles from "./Terminal.module.css";
@@ -6,18 +6,18 @@ import { useSection } from "../context/SectionContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 
 export default function Terminal() {
-  const { setActiveSection, activeSection } = useSection();
+  const { setActiveSection, activeSection, handleScrollTo } = useSection();
   const { t, lang, toggleLanguage } = useLanguage();
   const terminalRef = useRef(null);
   const [isBooted, setIsBooted] = useState(false);
-  const [activeCommand, setActiveCommand] = useState([activeSection]);
+  const [activeCommand, setActiveCommand] = useState(activeSection);
   const { theme, toggle } = useTheme();
 
   const commandOptions = useMemo(
     () => [
       { id: "profile", label: lang === "es" ? "perfil" : "profile" },
       { id: "stack", label: lang === "es" ? "stack" : "stack" },
-      { id: "proyectos", label: lang === "es" ? "proyectos" : "projects" },
+      { id: "projects", label: lang === "es" ? "proyectos" : "projects" },
     ],
     [lang],
   );
@@ -73,7 +73,7 @@ export default function Terminal() {
               <button
                 key={command.id}
                 type="button"
-                onClick={() => setActiveSection(command.id)}
+                onClick={handleScrollTo.bind(null, command.id)}
                 className={`px-2 py-1 text-[11px] tracking-[0.18em] transition-colors ${isActive
                   ? "border-emerald-600 dark:border-emerald-400/60 text-emerald-700 dark:text-emerald-300"
                   : "border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:border-emerald-600 dark:hover:border-emerald-400/30 hover:text-emerald-700 dark:hover:text-emerald-300"
