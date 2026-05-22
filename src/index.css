@@ -22,7 +22,7 @@
     --success: #10b981; /* emerald-500 */
     --danger: #ef4444; /* red-500 */
 
-    --card-bg: #ffffff; /* cards on light */
+    --card-bg: #f1f5f9; /* slate-100 */
   }
 
   /* Dark theme overrides when `.dark` class is present on root */

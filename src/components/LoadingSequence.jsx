@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from './LoadingSequence.module.css'; // crearás este archivo
+import styles from './LoadingSequence.module.css';
 
 const SEQUENCE = [
   { cmd: true, text: 'initializing portfolio...', delay: 0 },
