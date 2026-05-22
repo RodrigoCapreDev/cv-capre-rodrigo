@@ -23,7 +23,7 @@ export const translations = {
       </>
     ),
 
-    stackCommand: "stack_tecnologico",
+    stackCommand: "stack_tecno",
     skillsTitle: "Stack Tecnológico",
     skillsSubtitle:
       "Herramientas, lenguajes y prácticas que definen mi enfoque de desarrollo.",

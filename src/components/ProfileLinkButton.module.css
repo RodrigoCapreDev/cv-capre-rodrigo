@@ -53,20 +53,20 @@
 }
 
 .icon {
-  width: 36px;
-  height: 36px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.5px solid rgba(0, 0, 0, 0.08);
-  background: rgba(0, 0, 0, 0.03);
+  /*border: 0.5px solid rgba(0, 0, 0, 0.08);*/
+  /*background: rgba(0, 0, 0, 0.03);*/
   transition: border-color 0.2s, background 0.2s;
 }
 
 :global(.dark) .icon {
-  border-color: rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  /*border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);*/
 }
 
 .label {

@@ -4,8 +4,8 @@
   border-color: rgba(var(--primary-rgb), 0.4);
 }
 .github:hover .icon {
-  border-color: rgba(var(--primary-rgb), 0.35);
-  background: rgba(var(--primary-rgb), 0.08);
+  /*border-color: rgba(var(--primary-rgb), 0.35);
+  background: rgba(var(--primary-rgb), 0.08);*/
 }
 
 /* LinkedIn — secondary (sky) */
