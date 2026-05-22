@@ -21,7 +21,7 @@ export default function ProfileCard() {
   return (
     <section
       id="profile"
-      className="min-h-[85vh] w-full max-w-2xl flex flex-col justify-center items-center gap-6
+      className="min-h-[85vh] pt-6 pb-8 w-full max-w-2xl flex flex-col justify-center items-center gap-6
       mx-auto px-4 sm:px-6"
     >
       <motion.div
@@ -75,7 +75,7 @@ export default function ProfileCard() {
           handleScrollTo("stack");
         }}
         aria-label="Deslizar hacia abajo"
-        className="mt-1 w-32 inline-flex flex-col items-center gap-1 
+        className="hidden md:block mt-1 w-32 inline-flex flex-col items-center gap-1 
         rounded-lg border border-primary/50 bg-white/60 px-3 py-2 text-[10px] uppercase tracking-[0.3em] 
         text-secondary-text/55 shadow-sm transition-colors hover:border-primary/30 
         hover:text-secondary-text 

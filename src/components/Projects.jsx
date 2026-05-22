@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="mx-auto w-full h-full mt-12 max-w-2xl px-4 pt-6 pb-8 sm:px-6"
+      className="mx-auto w-full min-h-[85vh] h-full max-w-2xl px-4 pt-6 pb-8 sm:px-6"
     >
       {/* HEADER DE LA SECCIÓN */}
       <ScrollReveal>
