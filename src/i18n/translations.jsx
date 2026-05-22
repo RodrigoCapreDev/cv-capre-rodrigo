@@ -1,37 +1,46 @@
 export const translations = {
   es: {
     profileCommand: "perfil",
-    // Ficha Técnica
-    labelProfile: "( Perfil Profesional )",
+
+    profileIntro: "Hola, soy Rodrigo",
+
     profileDesc: (
       <>
-        Como estudiante de último año de Ingeniería en Sistemas, 
-        disfruto el desafío de resolver problemas complejos. 
-        Me enfoco en crear soluciones eficientes, involucrándome desde el análisis de las 
-        necesidades del sistema hasta la escritura del código. Mi formación técnica en electrónica 
-        me dio una base sólida en lógica y troubleshooting que hoy traslado al desarrollo. 
-        Soy metódico por naturaleza, tanto para armar arquitecturas como para organizar mi rutina. 
-        Fuera de la pantalla, seguro me encuentres entrenando en el gimnasio, inmerso en algún 
-        juego de rol y supervivencia, o investigando sobre nuevas tecnologías.
+        Como estudiante de último año de Ingeniería en Sistemas, disfruto el
+        desafío de resolver problemas complejos.
+        <br />
+        <br />
+        Me enfoco en crear soluciones eficientes, involucrándome desde el
+        análisis de las necesidades del sistema hasta la escritura del código.
+        Mi formación técnica en electrónica me dio una base sólida en lógica y
+        troubleshooting que hoy traslado al desarrollo.
+        <br />
+        <br />
+        Soy metódico por naturaleza, tanto para armar arquitecturas como para
+        organizar mi rutina. Fuera de la pantalla, seguro me encuentres
+        entrenando en el gimnasio, inmerso en algún juego de rol y
+        supervivencia, o investigando sobre nuevas tecnologías.
       </>
     ),
 
     stackCommand: "stack_tecnologico",
     skillsTitle: "Stack Tecnológico",
-    skillsSubtitle: "Herramientas, lenguajes y prácticas que definen mi enfoque de desarrollo.",
+    skillsSubtitle:
+      "Herramientas, lenguajes y prácticas que definen mi enfoque de desarrollo.",
     // Stack labels
     stackCore: "LENGUAJES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / NUBE",
     skillsNote:
       "Trabajo con una mirada de ingenieria: entender el problema, definir la estructura correcta, automatizar lo repetible y dejar el sistema facil de mantener.",
-    skillsSignal: "signal over decoration",
-    skillsFocus: "engineering first",
+    skillsSignal: "señal por sobre decoración",
+    skillsFocus: "ingeniería primero",
     skillAreas: [
       {
         code: "/core-systems",
         label: "CORE SYSTEMS",
-        summary: "APIs, reglas de negocio, flujo de datos y estructura backend.",
+        summary:
+          "APIs, reglas de negocio, flujo de datos y estructura backend.",
         skills: ["Python", "Django REST", "SQL", "Testing"],
       },
       {
@@ -61,7 +70,7 @@ export const translations = {
       type: "FULLSTACK / SERVERLESS",
       desc: "Desarrollé un sistema integral basado en un motor de máquinas de estados para gestionar solicitudes de servicio técnico de principio a fin, garantizando trazabilidad total del ciclo de vida. Implementé la persistencia de datos en la nube utilizando Supabase y configuré una arquitectura serverless con funciones de AWS Lambda para automatizar notificaciones y eventos del sistema.",
       tech: ["React", "Django REST", "Supabase", "AWS Lambda"],
-      status: "COMPLETADO",
+      status: "COMPLETADO - EN PROCESO DE DESPLIEGUE",
       github: "https://github.com/QuickSolutionsUTN/Cloud-QuickSolutions",
     },
     project2: {
@@ -70,26 +79,28 @@ export const translations = {
       type: "FULLSTACK / INFRA",
       desc: "Diseñé y desarrollé una aplicación web CRUD para administrar catálogos de productos, incluyendo un panel de administración y una interfaz pública en tiempo real. Construí la comunicación cliente-servidor mediante una API REST y me encargué de la infraestructura: contenericé el entorno con Docker para mayor portabilidad y realicé el despliegue en un servidor Linux en Microsoft Azure, configurando la red y la seguridad.",
       tech: ["React", "Django REST", "PostgreSQL", "Docker", "Azure"],
-      status: "COMPLETADO",
+      status: "COMPLETADO - EN PROCESO DE DESPLIEGUE",
       github: "https://github.com/RodrigoCapreDev/Coffee-Management-System",
-    }
+    },
   },
 
   en: {
-
     profileCommand: "profile",
-    // Ficha Técnica
-    labelProfile: "( Professional Profile )",
+    profileIntro: "Hello, I'm Rodrigo",
     profileDesc: (
       <>
-        As a final-year Information Systems Engineering student, 
-        I enjoy the challenge of solving complex problems. 
-        I focus on creating efficient solutions, getting involved from analyzing 
-        system requirements all the way to writing the code. My technical background in 
-        electronics gave me a solid foundation in logic and troubleshooting that 
-        I now bring into development. I am methodical by nature, whether I'm building architectures 
-        or organizing my routine. Off-screen, you'll likely find me working out at the gym, 
-        immersed in a survival RPG, or researching new technologies.
+        As a final-year Information Systems Engineering student, I enjoy the
+        challenge of solving complex problems.
+        <br />
+        <br />
+        I focus on creating efficient solutions, getting involved from analyzing
+        system requirements all the way to writing the code. My technical
+        background in electronics gave me a solid foundation in logic and
+        troubleshooting that I now bring into development.
+        <br />
+        <br />I am methodical by nature, whether I'm building architectures or
+        organizing my routine. Off-screen, you'll likely find me working out at
+        the gym, immersed in a survival RPG, or researching new technologies.
       </>
     ),
 
@@ -99,8 +110,6 @@ export const translations = {
     stackCore: "LANGUAGES",
     stackWeb: "WEB STACK",
     stackInfra: "DEVOPS / CLOUD",
-    skillsNote:
-      "I work with an engineering mindset: understand the problem, define the right structure, automate repeatable work and keep systems easy to maintain.",
     skillsSignal: "signal over decoration",
     skillsFocus: "engineering first",
     skillAreas: [
@@ -139,7 +148,7 @@ export const translations = {
       type: "FULLSTACK / SERVERLESS",
       desc: "Developed a comprehensive system based on a state machine engine to manage technical service requests from end to end, ensuring full lifecycle traceability. Implemented cloud data persistence using Supabase and configured a serverless architecture with AWS Lambda functions to automate notifications and system events.",
       tech: ["React", "Django REST", "Supabase", "AWS Lambda"],
-      status: "COMPLETED",
+      status: "COMPLETED - IN DEPLOYMENT PROCESS",
       github: "https://github.com/QuickSolutionsUTN/Cloud-QuickSolutions",
     },
     project2: {
@@ -148,8 +157,8 @@ export const translations = {
       type: "FULLSTACK / INFRA",
       desc: "Designed and developed a CRUD web application to manage product catalogs, including an admin panel and a real-time public interface. Built client-server communication via a REST API and managed the infrastructure: containerized the environment with Docker for portability and deployed it on a Linux server in Microsoft Azure, configuring networking and security.",
       tech: ["React", "Django REST", "PostgreSQL", "Docker", "Azure"],
-      status: "COMPLETED",
+      status: "COMPLETED - IN DEPLOYMENT PROCESS",
       github: "https://github.com/RodrigoCapreDev/Coffee-Management-System",
-    }
+    },
   },
 };

@@ -31,7 +31,7 @@ export default function ProfileCard() {
         className="space-y-3"
       >
         <p className="font-mono text-md tracking-[0.22em] text-text uppercase pb-2">
-          Hola, soy Rodrigo
+          {t.profileIntro}
         </p>
         <p
           className="text-md text-secondary-text leading-relaxed mb-5 

@@ -25,7 +25,8 @@ export default function SkillsSection() {
                 className="group p-5 sm:p-6 border border-black/10 rounded-lg transition-all duration-200
                             hover:border-primary/30 hover:bg-primary/[0.03] cursor-default
                             dark:border-white/[0.06] dark:bg-white/[0.01]
-                            dark:hover:border-primary/30 dark:hover:bg-primary/[0.03]">
+                            dark:hover:border-primary/30 dark:hover:bg-primary/[0.03]"
+              >
                 <div className="flex items-start justify-between gap-4 border-b border-dashed border-black/10 pb-3 dark:border-white/10">
                   <div className="min-w-0">
                     <h3 className="mt-1 font-mono text-sm uppercase tracking-[0.18em] text-text sm:text-[15px]">
@@ -55,12 +56,13 @@ export default function SkillsSection() {
             ))}
           </div>
 
+          {/*
           <div className="mt-7 flex flex-col items-center justify-center gap-2 border-t border-black/10 pt-4 text-center font-mono text-[11px] uppercase tracking-[0.24em] text-muted dark:border-white/10 sm:flex-row sm:gap-3">
             <span>{t.skillsSignal}</span>
             <span className="text-primary/80">// {t.skillsFocus}</span>
-          </div>
+          </div>*/}
         </div>
       </ScrollReveal>
     </section>
   );
-} 
+}
